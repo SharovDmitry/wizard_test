@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+
+      <h2 class="text-center">Simple Wizard App</h2>
+      <% if user_signed_in? %>
+          <div style="margin-bottom: 10px">
+            <span>Your Orders: <%= @orders.count %></span>
+            <span><%= link_to 'Sign out', destroy_user_session_path, method: :delete, class:'pull-right'%></span>
+          </div>
+          <ol class="list-group">
+            <% @orders.each do |order| %>
+                <li class="list-group-item text-center">
+                  <span><%= order.city %></span>
+                  <span><%= order.date %></span>
+                  <span><%= order.hotel %></span>
+                </li>
+            <% end %>
+          </ol>
+      <% end %>
+
+      <div class="text-center">
+        <%= link_to 'New Order', step1_orders_path, class: 'btn btn-primary'%>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+date_one:
+  id: 1
+  date: '2017-01-05'
+  hotel_id: 1
+
+date_two:
+  id: 2
+  date: '2017-01-10'
+  hotel_id: 1
+
+date_three:
+  id: 3
+  date: '2017-01-15'
+  hotel_id: 1
+
+date_four:
+  id: 4
+  date: '2017-01-20'
+  hotel_id: 1
+
+date_five:
+  id: 5
+  date: '2017-01-25'
+  hotel_id: 1
+
+
+

@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+
+      <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'pull-right log-out-link' %>
+
+      <ol class="breadcrumb">
+        <li><%= link_to 'Step 1', step1_orders_path %></li>
+        <li><%= link_to 'Step 2', step2_orders_path %></li>
+        <li><%= link_to 'Step 3', step3_orders_path %></li>
+        <li class="active">Confirm</li>
+      </ol>
+
+      <ol class="list-group">
+        <li class="list-group-item text-center">
+          <span><%= @order.city %></span>
+          <span><%= @order.date %></span>
+          <span><%= @order.hotel %></span>
+        </li>
+      </ol> <br/>
+
+      <%= button_to 'Confirm', {action: 'create'}, {class: 'btn btn-primary center-block'} %>
+
+    </div>
+  </div>
+</div>
+

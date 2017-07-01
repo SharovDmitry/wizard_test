@@ -1,0 +1,9 @@
+hotel_one:
+  id: 1
+  name:  Test Hotel 1
+  city_id: 1
+
+hotel_two:
+  id: 2
+  name: Test Hotel 2
+  city_id: 1

@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+
+      <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'pull-right log-out-link' %>
+
+      <ol class="breadcrumb">
+        <li class="active">Step 1</li>
+        <li>Step 2</li>
+        <li>Step 3</li>
+        <li>Confirm</li>
+      </ol>
+
+      <%= form_for @order, url: save_step_orders_path  do |f| %>
+          <%= f.label :city %> <br/>
+          <%= f.select(:city, options_from_collection_for_select(@cities, :name, :name, @order.city), {}, {class: 'form-control'}) %> <br/>
+          <%= f.submit 'Continue', class: 'btn btn-primary center-block' %>
+      <% end %>
+
+    </div>
+  </div>
+</div>
